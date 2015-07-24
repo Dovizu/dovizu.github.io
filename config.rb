@@ -35,6 +35,14 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+# Ignore Jetbrains files
+config[:file_watcher_ignore] += [
+    /.iml/,
+    /.idea\//,
+    /.ipr/,
+    /.iws/
+]
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
