@@ -1,0 +1,20 @@
+{
+  "name": "donny.io",
+  "version": "0.0.0",
+  "authors": [
+    "Donny Reynolds <donnywith@gmail.com>"
+  ],
+  "description": "Hello World from Donny Reynolds",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
