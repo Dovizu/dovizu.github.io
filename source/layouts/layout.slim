@@ -8,5 +8,5 @@ html
     title = current_page.data.title || "The Middleman"
     = stylesheet_link_tag "normalize", "all"
     = javascript_include_tag  "all" 
-  body class="#{ page_classes }" 
+  body.container class="#{ page_classes }"
     = yield

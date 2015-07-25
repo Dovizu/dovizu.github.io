@@ -1,0 +1,24 @@
+.index {
+  #welcome-card {
+    #center-image {
+      background: transparent image-url("homepage/center-image.jpg") no-repeat center;
+      background-size: contain;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 300px;
+    }
+    #name {
+      font-size: 36px;
+      font-family: Nunito, "Helvetica Neue", sans-serif;
+      font-weight: 700;
+    }
+
+    margin-top: 60px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 19px;
+    line-height: 20px;
+  }
+}
