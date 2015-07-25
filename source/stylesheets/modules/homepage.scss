@@ -9,15 +9,16 @@
       height: 300px;
     }
     #name {
-      font-size: 36px;
       font-family: Nunito, "Helvetica Neue", sans-serif;
       font-weight: 700;
     }
 
-    margin-top: 60px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
+    @media #{$medium-and-up} {
+      margin-top: 60px;
+      width: 350px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     font-size: 19px;
     line-height: 20px;
   }
