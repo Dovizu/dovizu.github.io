@@ -1,10 +1,16 @@
+$default-body-font: Nunito, "Helvetica Neue", sans-serif;
+$default-body-font-normal: 300;
+$default-body-font-bold: 400;
+$default-body-font-bolder: 700;
+$default-headline-font: Raleway, "Helvetica Neue", sans-serif;
+$default-headline-font-normal: 800;
+
 html {
-  font-family: Nunito, "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  color: #626262;
+  font-family: $default-body-font;
+  font-weight: $default-body-font-normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Raleway, "Helvetica Neue", sans-serif;
-  font-weight: 800;
+  font-family: $default-headline-font;
+  font-weight: $default-headline-font-normal;
 }
