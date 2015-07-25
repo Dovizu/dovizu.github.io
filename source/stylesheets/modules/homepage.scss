@@ -10,7 +10,7 @@
     }
     #name {
       font-family: $default-body-font;
-      font-weight: 700;
+      font-weight: $default-body-font-bolder;
     }
 
     @media #{$medium-and-up} {
