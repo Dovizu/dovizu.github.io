@@ -10,4 +10,14 @@ html
     = stylesheet_link_tag 'all'
     = javascript_include_tag  'all'
   body.container class="#{ page_classes }"
-    = yield
+    main = yield
+    footer
+      p.flow-text.center-align
+        i.fa.fa-twitter
+        = '  '
+        i.fa.fa-linkedin
+        = '  '
+        i.fa.fa-github-alt
+        = '  '
+        i.fa.fa-envelope-o
+        = '  '
