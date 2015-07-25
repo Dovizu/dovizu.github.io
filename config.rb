@@ -70,21 +70,21 @@ set :images_dir, 'images'
 bower_directory = 'vendor/assets/components'
 # Add Bower components to Sprocket
 sprockets.append_path File.join root, bower_directory
-# Build search patterns
-patterns = [
-    '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
-    '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
-    '.js',                                    # Javascript
-].map { |e| File.join(bower_directory, "**", "*#{e}" ) }
-Rake::FileList.new(*patterns) do |l|
-  l.exclude(/src/)
-  l.exclude(/test/)
-  l.exclude(/demo/)
-  l.exclude { |f| !File.file? f }
-end.each do |f|
-  # Import relative paths
-  sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(bower_directory)))
-end
+# # Build search patterns
+# patterns = [
+#     '.png',  '.gif', '.jpg', '.jpeg', '.svg', # Images
+#     '.eot',  '.otf', '.svc', '.woff', '.ttf', # Fonts
+#     '.js',                                    # Javascript
+# ].map { |e| File.join(bower_directory, "**", "*#{e}" ) }
+# Rake::FileList.new(*patterns) do |l|
+#   l.exclude(/src/)
+#   l.exclude(/test/)
+#   l.exclude(/demo/)
+#   l.exclude { |f| !File.file? f }
+# end.each do |f|
+#   # Import relative paths
+#   sprockets.import_asset(Pathname.new(f).relative_path_from(Pathname.new(bower_directory)))
+# end
 
 # Build-specific configuration
 configure :build do
