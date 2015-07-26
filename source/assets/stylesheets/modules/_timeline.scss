@@ -11,6 +11,7 @@
   // Colors
   $timeline-color: color('grey', 'lighten-2');
   $timeline-project-color: color('grey', 'base');
+  $timeline-event-color: $color-secondary-1-2;
 
   .timeline-container {
     max-width: 700px;
@@ -41,6 +42,10 @@
       }
     }
 
+    .timeline-mark {
+
+    }
+
     .timeline-block {
       position: relative;
       @include transition(all 0.1s ease-in);
@@ -60,13 +65,9 @@
         margin-bottom: 0;
       }
 
-      // Hover to lift property
-      &:hover {
-        .timeline-badge, .timeline-content {
-          @extend .z-depth-2;
-          opacity: 1;
-        }
-      }
+      /*
+       * General block stylings
+       */
 
       .timeline-badge, .timeline-content {
         @include transition(all 0.1s ease-in);
@@ -74,29 +75,19 @@
 
       .timeline-badge {
         position: absolute;
-        top: $timeline-img-top-margin;
         left: 0;
-        @extend .z-depth-1;
-        opacity: 0.85;
-        @mixin circle-box-shadow($thickness) {
-          //box-shadow: 0 0 0 $thickness grey,
-          //inset 0 2px 0 rgba(#000, .08),
-          //0 3px 0 4px rgba(#000, .05);
-          @include border-radius(50%);
-          //border: $thickness solid grey;
-          background-color: grey;
-        }
+        @include border-radius(50%);
+        background-color: grey;
         @media #{$small-and-down} {
-          @include circle-box-shadow($timeline-thickness-mobile);
           width: $image-dim-mobile;
           height: $image-dim-mobile;
         }
         @media #{$medium-and-up} {
-          @include circle-box-shadow($timeline-thickness);
           width: $image-dim;
           height: $image-dim;
         }
 
+        // For badges that use image as icon
         img {
           display: block;
           width: 24px;
@@ -107,40 +98,26 @@
           margin-left: -12px;
           margin-top: -12px;
         }
+        // For badges that use font as icon (fontawesome, etc.)
         span {
           width: 100%;
           font-size: 1.4rem;
         }
       }
 
-      // project-specific badge colors
-
-      &.project-block .timeline-badge {
-        //border-color: darken($timeline-project-color, 10%);
-        background-color: darken($timeline-project-color, 10%);
-        color: white;
-      }
-
-      // Whole content is clickable, but don't want link color
-      > a {
-        color: inherit;
-      }
       .timeline-content {
         position: relative;
         overflow: visible !important;
         background: color('grey', 'lighten-5');
         @include border-radius($global-radius);
         @include clearfix;
-        @extend .z-depth-1;
         @media #{$small-and-down} {
           margin-left: 60px;
         }
         @media #{$medium-and-up} {
           margin-left: 80px;
         }
-
         img {
-          @include border-radius($global-radius);
           display: block;
         }
 
@@ -160,6 +137,51 @@
         //  border: $triangle-size solid transparent;
         //  border-right: $triangle-size solid color('grey', 'lighten-3');
         //}
+      }
+
+      /*
+       * Project block specific stylings
+       */
+      &.project-block {
+        // Whole content is clickable, but don't want link color
+        > a {
+          color: inherit;
+        }
+        .timeline-badge {
+          @extend .z-depth-1;
+          background-color: darken($timeline-project-color, 5%);
+          color: white;
+        }
+        .timeline-content {
+          @extend .z-depth-1;
+          img {
+            @include border-radius($global-radius);
+          }
+        }
+        // Hover to lift property
+        &:hover {
+          .timeline-badge, .timeline-content {
+            @extend .z-depth-1-half;
+
+          }
+          .timeline-badge {
+            background-color: $timeline-project-color;
+          }
+        }
+      }
+
+      /*
+       * Event block specific stylings
+       */
+      &.event-block {
+        .timeline-badge {
+          background-color: $timeline-event-color;
+          color: white;
+        }
+        .timeline-content {
+          padding: 1rem;
+          background-color: lighten($timeline-event-color, 30%);
+        }
       }
     }
   }
