@@ -62,7 +62,7 @@ end
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
-
+sprockets.append_path File.join root, 'assets/fonts'
 activate :directory_indexes
 
 ###

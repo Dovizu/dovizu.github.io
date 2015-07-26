@@ -8,6 +8,8 @@
   // How far the circle descend from top of section
   $timeline-img-top-margin: 15px;
   $triangle-size: 10px;
+  // Colors
+  $timeline-color: color('grey', 'lighten-2');
 
   .timeline-container {
     max-width: 700px;
@@ -27,7 +29,7 @@
       position: absolute;
       top: 0;
       height: 100%;
-      background: grey;
+      background: $timeline-color;
       @media #{$small-and-down} {
         left: $image-dim-mobile/2 - $timeline-thickness-mobile/2;
         width: $timeline-thickness-mobile;
@@ -40,14 +42,15 @@
 
     .timeline-block {
       position: relative;
+      @include transition(all 0.1s ease-in);
+      overflow: visible !important;
+      @include clearfix;
       @media #{$small-and-down} {
         margin: 30px 0;
       }
       @media #{$medium-and-up} {
         margin: 60px 0;
       }
-      overflow: visible !important;
-      @include clearfix;
 
       &:first-child {
         margin-top: 0;
@@ -56,15 +59,29 @@
         margin-bottom: 0;
       }
 
+      // Hover to lift property
+      &:hover {
+        .timeline-img, .timeline-content {
+          @extend .z-depth-2;
+        }
+      }
+
+      .timeline-img, .timeline-content {
+        @include transition(all 0.1s ease-in);
+      }
 
       .timeline-img {
         position: absolute;
         top: $timeline-img-top-margin;
         left: 0;
+        background: white;
+        @extend .z-depth-1;
         @mixin circle-box-shadow($thickness) {
-          box-shadow: 0 0 0 $thickness grey,
-          inset 0 2px 0 rgba(#000, .08),
-          0 3px 0 4px rgba(#000, .05);
+          //box-shadow: 0 0 0 $thickness grey,
+          //inset 0 2px 0 rgba(#000, .08),
+          //0 3px 0 4px rgba(#000, .05);
+          @include border-radius(50%);
+          border: $thickness solid grey;
         }
         @media #{$small-and-down} {
           @include circle-box-shadow($timeline-thickness-mobile);
@@ -88,40 +105,49 @@
         }
         span {
           width: 100%;
-          font-size: 1.8rem;
+          font-size: 1.4rem;
         }
+      }
+
+      // Whole content is clickable, but don't want link color
+      > a {
+        color: inherit;
       }
       .timeline-content {
         position: relative;
         overflow: visible !important;
+        background: color('grey', 'lighten-5');
+        @include border-radius($global-radius);
+        @include clearfix;
+        @extend .z-depth-1;
         @media #{$small-and-down} {
           margin-left: 60px;
-          padding: 15px;
         }
         @media #{$medium-and-up} {
           margin-left: 80px;
-          padding: 24px;
         }
-        background: color('grey', 'lighten-3');
 
-        @include clearfix;
+        img {
+          @include border-radius($global-radius);
+          display: block;
+        }
 
         // triangle
-        &::before {
-          content: '';
-          position: absolute;
-          @media #{$small-and-down} {
-            top: $image-dim-mobile/2 - $triangle-size + $timeline-img-top-margin;
-          }
-          @media #{$medium-and-up} {
-            top: $image-dim/2 - $triangle-size + $timeline-img-top-margin;
-          }
-          right: 100%;
-          height: 0;
-          width: 0;
-          border: $triangle-size solid transparent;
-          border-right: $triangle-size solid color('grey', 'lighten-3');
-        }
+        //&::before {
+        //  content: '';
+        //  position: absolute;
+        //  @media #{$small-and-down} {
+        //    bottom: $image-dim-mobile/2 - $triangle-size + $timeline-img-top-margin;
+        //  }
+        //  @media #{$medium-and-up} {
+        //    bottom: $image-dim/2 - $triangle-size + $timeline-img-top-margin;
+        //  }
+        //  right: 100%;
+        //  height: 0;
+        //  width: 0;
+        //  border: $triangle-size solid transparent;
+        //  border-right: $triangle-size solid color('grey', 'lighten-3');
+        //}
       }
     }
   }
