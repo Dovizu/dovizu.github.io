@@ -8,6 +8,13 @@ $default-headline-font-normal: 800;
 html {
   font-family: $default-body-font;
   font-weight: $default-body-font-normal;
+  @media only screen and (min-width: 0) {
+    font-size: 18px;
+  }
+
+  @media only screen and (min-width: $medium-screen) {
+    font-size: 19px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {

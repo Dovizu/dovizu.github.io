@@ -9,9 +9,10 @@
 
 // Vendor
 @import "materialize/sass/materialize";
+@import "compass";
 
 // Components
-@import "components/typography";
+@import "components/*";
 
 // Modules
-@import "modules/homepage";
+@import "modules/*";
