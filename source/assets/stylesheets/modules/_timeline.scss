@@ -10,6 +10,7 @@
   $triangle-size: 10px;
   // Colors
   $timeline-color: color('grey', 'lighten-2');
+  $timeline-project-color: color('grey', 'base');
 
   .timeline-container {
     max-width: 700px;
@@ -61,27 +62,29 @@
 
       // Hover to lift property
       &:hover {
-        .timeline-img, .timeline-content {
+        .timeline-badge, .timeline-content {
           @extend .z-depth-2;
+          opacity: 1;
         }
       }
 
-      .timeline-img, .timeline-content {
+      .timeline-badge, .timeline-content {
         @include transition(all 0.1s ease-in);
       }
 
-      .timeline-img {
+      .timeline-badge {
         position: absolute;
         top: $timeline-img-top-margin;
         left: 0;
-        background: white;
         @extend .z-depth-1;
+        opacity: 0.85;
         @mixin circle-box-shadow($thickness) {
           //box-shadow: 0 0 0 $thickness grey,
           //inset 0 2px 0 rgba(#000, .08),
           //0 3px 0 4px rgba(#000, .05);
           @include border-radius(50%);
-          border: $thickness solid grey;
+          //border: $thickness solid grey;
+          background-color: grey;
         }
         @media #{$small-and-down} {
           @include circle-box-shadow($timeline-thickness-mobile);
@@ -93,6 +96,7 @@
           width: $image-dim;
           height: $image-dim;
         }
+
         img {
           display: block;
           width: 24px;
@@ -107,6 +111,14 @@
           width: 100%;
           font-size: 1.4rem;
         }
+      }
+
+      // project-specific badge colors
+
+      &.project-block .timeline-badge {
+        //border-color: darken($timeline-project-color, 10%);
+        background-color: darken($timeline-project-color, 10%);
+        color: white;
       }
 
       // Whole content is clickable, but don't want link color
