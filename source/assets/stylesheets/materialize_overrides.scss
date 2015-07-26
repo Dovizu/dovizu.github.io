@@ -1,14 +1,15 @@
 @import "materialize/sass/components/color";
+@import "components/colors";
 
 ///*** Colors ***/
-//$primary-color: color("materialize-red", "lighten-2") !default;
-//$primary-color-light: lighten($primary-color, 15%) !default;
-//$primary-color-dark: darken($primary-color, 15%) !default;
+$primary-color: $color-primary-0;
+$primary-color-light: $color-primary-2;
+$primary-color-dark: $color-primary-3;
 //
-//$secondary-color: color("teal", "lighten-1") !default;
-//$success-color: color("green", "base") !default;
-//$error-color: color("red", "base") !default;
-//$link-color: color("light-blue", "darken-1") !default;
+$secondary-color: $color-secondary-2-0;
+$success-color: $color-complement-0;
+$error-color: $color-secondary-2-0;
+$link-color: $color-primary-3;
 //
 ///*** Badges ***/
 //$badge-bg-color: $secondary-color !default;
