@@ -1,8 +1,26 @@
 section#timeline.timeline-container
+
   .timeline-mark
-    .remark
-      span What's keeping me busy
     span.mark Now
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    a href='#'
+      .timeline-content
+        = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    a href='#'
+      .timeline-content
+        = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
+
+  .timeline-mark
+    span.mark 2014
+    .remark
+      span The year of butterflies and bananas
 
   .timeline-block.project-block
     .timeline-badge.circle.valign-wrapper.center-align
@@ -26,26 +44,7 @@ section#timeline.timeline-container
       = link_to ' University of California, Berkeley', 'http://www.berkeley.edu/', target: '_blank'
       span .
 
-  .timeline-block.project-block
-    .timeline-badge.circle.valign-wrapper.center-align
-      span.valign: i.ss-star
-    a href='#'
-      .timeline-content
-        = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
-
   .timeline-mark
-    .remark
-      span The year of butterflies and bananas
-    span.mark 2015
-
-  .timeline-block.project-block
-    .timeline-badge.circle.valign-wrapper.center-align
-      span.valign: i.ss-star
-    a href='#'
-      .timeline-content
-        = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
-
-  .timeline-mark
+    span.mark 2012
     .remark
       span Nothing beats a good night of anime
-    span.mark 2012
