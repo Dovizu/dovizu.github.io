@@ -1,3 +1,6 @@
+---
+title: "Timeline"
+---
 section#timeline.timeline-container
 
   .timeline-mark
@@ -6,7 +9,7 @@ section#timeline.timeline-container
   .timeline-block.project-block
     .timeline-badge.circle.valign-wrapper.center-align
       span.valign: i.ss-star
-    a href='#'
+    = link_to 'projects/squairo' do
       .timeline-content
         = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
 
