@@ -16,7 +16,7 @@ html {
     font-size: 19px;
   }
 
-  a {
+  a, a:after, a:before {
     @include transition(all 0.1s ease-in);
     &:hover {
       color: $color-primary-0;

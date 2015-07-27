@@ -1,0 +1,74 @@
+@import "parameters";
+
+body header {
+  ul.breadcrumbs {
+    list-style: none;
+    overflow: hidden;
+    font-size: 0.8rem;
+
+    $background-color: color('grey', 'lighten-1');
+
+    li {
+      float: left;
+      &:first-child a {
+        padding-left: 25px;
+        border-top-left-radius: $global-radius;
+        border-bottom-left-radius: $global-radius;
+      }
+      @each $child, $lightness in (2, 5%), (3, 10%), (4, 10%) {
+        &:nth-child(#{$child}) {
+          a { background: lighten($background-color, $lightness) }
+          a:after { border-left-color: lighten($background-color, $lightness) }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        padding: 5px 0 5px 50px;
+        background: $background-color;
+        color: white;
+        position: relative;
+        display: block;
+        float: left;
+
+        &:after {
+          content: " ";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 30px solid $background-color;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          left: 100%;
+          z-index: 2;
+        }
+
+        &:before {
+          content: " ";
+          display: block;
+          width: 0;
+          height: 0;
+          border-top: 50px solid transparent;
+          border-bottom: 50px solid transparent;
+          border-left: 30px solid white;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          margin-left: 1px;
+          left: 100%;
+          z-index: 1;
+        }
+
+        &:hover {
+          background: lighten($background-color, 10%);
+          &:after {
+            border-left-color: lighten($background-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

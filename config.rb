@@ -1,5 +1,11 @@
 require 'rake/file_list'
 require 'pathname'
+require 'lib/navigation_helpers'
+
+###
+# Load Helpers
+###
+helpers NavigationHelpers
 
 ###
 # Compass
