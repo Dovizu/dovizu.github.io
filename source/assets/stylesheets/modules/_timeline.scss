@@ -1,12 +1,22 @@
 .timeline_index {
 
-  // Settings
+  // Dimensions
   $timeline-thickness: 6px;
   $image-dim: 60px;
   $timeline-thickness-mobile: 4px;
   $image-dim-mobile: 40px;
+  @mixin gap-from-timeline() {
+    // how far the main content is away from vertical line
+    @media #{$small-and-down} {
+      margin-left: 60px;
+    }
+    @media #{$medium-and-up} {
+      margin-left: 80px;
+    }
+  }
   // How far the circle descend from top of section
   $timeline-img-top-margin: 15px;
+  // Size of the pointing triangle
   $triangle-size: 10px;
   // Colors
   $timeline-color: color('grey', 'lighten-2');
@@ -42,8 +52,21 @@
       }
     }
 
+    // Marks time
     .timeline-mark {
-
+      position: relative;
+      background-color: white;
+      color: $timeline-color;
+      //text-align: center;
+      .mark {
+        font-size: 2.1rem;
+        font-family: $default-headline-font;
+        font-weight: $default-headline-font-normal;
+      }
+      .remark {
+        margin-bottom: -10px;
+        padding-top: 10px;
+      }
     }
 
     .timeline-block {
@@ -76,6 +99,7 @@
       .timeline-badge {
         position: absolute;
         left: 0;
+        bottom: 0;
         @include border-radius(50%);
         background-color: grey;
         @media #{$small-and-down} {
@@ -111,12 +135,7 @@
         background: color('grey', 'lighten-5');
         @include border-radius($global-radius);
         @include clearfix;
-        @media #{$small-and-down} {
-          margin-left: 60px;
-        }
-        @media #{$medium-and-up} {
-          margin-left: 80px;
-        }
+        @include gap-from-timeline;
         img {
           display: block;
         }
