@@ -1,5 +1,7 @@
 ---
-title: "Squairo"
+project_title: Squairo
+post_title: Solving a storage problem
+layout: project
 ---
 
 An h1 header

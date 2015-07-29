@@ -1,0 +1,5 @@
+= wrap_layout :layout do
+  article.project-container
+    h1 = current_page.data.project_title || 'No Title'
+    h2 = current_page.data.post_title || 'No Post Title'
+    = yield
