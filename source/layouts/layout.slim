@@ -6,7 +6,7 @@ html
     meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
     / Use title if it's in the page YAML frontmatter
-    title = current_page.data.title || 'Donny Reynolds'
+    title = current_page.data.title || current_page.data.module_title || 'Donny Reynolds'
     = stylesheet_link_tag 'all'
     = javascript_include_tag  'all'
   body.container class="#{ page_classes }"
@@ -14,7 +14,9 @@ html
       ul.breadcrumbs
         - breadcrumbs_list(current_resource).each do |page|
           li = link_to page[:name], page[:url]
-    main = yield
+    main
+      h1.center-align.module-title = current_page.data.module_title
+      = yield
     footer
       p.flow-text.center-align
         a href='https://twitter.com/dovizu' target='_blank'

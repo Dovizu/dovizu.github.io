@@ -1,6 +1,9 @@
-@import "parameters";
+@import "../components/parameters";
 
 body header {
+  @media #{$medium-and-up} {
+    padding: 1rem 0 0 0;
+  }
   ul.breadcrumbs {
     list-style: none;
     overflow: hidden;

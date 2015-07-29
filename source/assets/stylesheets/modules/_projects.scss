@@ -1,4 +1,13 @@
 .projects article.project-container {
   max-width: 700px;
   margin: 0 auto;
+  .project-lead {
+    h1.project-name {
+      margin-bottom: 0;
+    }
+    h1.post-title {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+  }
 }
