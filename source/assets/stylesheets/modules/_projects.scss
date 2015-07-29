@@ -1,13 +1,29 @@
 .projects article.project-container {
   max-width: 700px;
   margin: 0 auto;
+
+  $lead-height: 15rem;
+  .project-banner {
+    @extend .z-depth-1;
+    z-index: -999;
+    height: $lead-height;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-size: cover;
+  }
   .project-lead {
-    h1.project-name {
-      margin-bottom: 0;
+    height: $lead-height;
+    .valign {
+      h1.project-name {
+        margin-bottom: 0;
+      }
+      h1.post-title {
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
     }
-    h1.post-title {
-      margin-top: 0;
-      font-size: 1.5rem;
-    }
+  }
+  .project-content {
   }
 }
