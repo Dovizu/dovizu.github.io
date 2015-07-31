@@ -15,7 +15,8 @@ html
         - breadcrumbs_list(current_resource).each do |page|
           li = link_to page[:name], page[:url]
     main
-      h1.center-align.module-title = current_page.data.module_title
+      - if current_page.data.module_title.present?
+        h1.center-align.module-title = current_page.data.module_title
       = yield
     footer
       p.flow-text.center-align
