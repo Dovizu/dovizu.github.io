@@ -15,6 +15,13 @@
   .project-lead {
     height: $lead-height;
     .valign {
+      $stroke-color: #fff;
+      //text-shadow:
+      //-1px -1px 0 $stroke-color,
+      //1px -1px 0 $stroke-color,
+      //-1px 1px 0 $stroke-color,
+      //1px 1px 0 $stroke-color;
+
       h1.project-name {
         margin-bottom: 0;
       }
