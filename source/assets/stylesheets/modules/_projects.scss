@@ -4,7 +4,7 @@
 
   $lead-height: 15rem;
   .project-banner {
-    @extend .z-depth-1;
+    //@extend .z-depth-1;
     z-index: -999;
     height: $lead-height;
     position: absolute;
