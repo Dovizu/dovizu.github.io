@@ -1,6 +1,6 @@
 .projects article.project-container {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 1.6rem auto;
 
   $lead-height: 15rem;
   .project-banner {
@@ -13,7 +13,7 @@
     background-size: cover;
   }
   .project-lead {
-    height: $lead-height;
+    height: $lead-height + 0.5rem;
     .valign {
       $stroke-color: #fff;
       //text-shadow:
