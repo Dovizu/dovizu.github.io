@@ -33,6 +33,23 @@ section#timeline.timeline-container
   /    .timeline-content
   /      = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
   /
+  .timeline-block.event-block
+    .timeline-badge.valign-wrapper.center-align
+      span.valign: i.ss-calendar
+    .timeline-content
+      span
+        | Started studying
+        a<> href="http://www.eecs.berkeley.edu" target="_blank" Electrical Engineering and Computer Sciences
+        | at
+        a<> href="http://www.berkeley.edu" target="_blank" University of California, Berkeley.
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to '/projects/anime-spotlight' do
+      .timeline-content
+        = image_tag 'projects/anime-spotlight/feature-shot.png', class: 'responsive-img'
+
   .timeline-mark
     span.mark 2012
     .remark
