@@ -9,50 +9,20 @@ banner:
     stroke_color: '000'
 ---
 
-I've long been a fan of Japanese pop culture, particularly Japanese animation and various sub-genres of J-Pop. In my latter years of high school, I decided to turn this hobby into something more. What I wanted was a site where I can get high-quality reviews and coverage on various pop culture topics that I care about, without having to sift through tons of media channels, most of which were only a little more than disappointing in terms of quality. 
+AnimeSpotlight is a collaborative blog where each author owns his/her own program and focuses on reviewing anime titles. It's one of the two successors of [FM 139.7](/projects/fm1397) and was created to bring one of the most popular topics from FM 139.7 to a dedicated platform, so we could reach out to more people and earn followers by shifting our content focus to just be anime reviews.
 
-### The Landscape
-With that thought in mind, I said to myself: “I’d just have to launch a blog, right?” Well, not wrong. The problem with most J-Pop and anime blogs in 2011 was stemming from a lack of organization and meaningful thoughts. A few blogs were exceptionally good at writing about a particular topic, but none of them fed my appetite for a variety of thoughtful content.
+### Content Positioning
 
-### Choosing a Platform
-Since I had zero experience launching a media platform prior to this, it was important for me to choose something with popular support so I could get answers to development-related questions quickly. I picked up one of the most popular blogging frameworks at the time: WordPress. Then, I launched what could be called the (shabby looking) MVP of FM 139.7.
+Statistics from our previous site, FM 139.7, tell us that people really appreciated the substantial reviews we wrote. It was a distinguishing factor for the site, largely thanks to the beautiful and snarky reviews our program director Pete wrote. AnimeSpotlight was created entirely with this type of content in mind, and was designated for his anime reviewing program. We wanted to be really good at one thing.
 
-<img src="/assets/images/projects/fm1397/version 1.png" class='responsive-img materialboxed' />
+### Platform & Design
 
-Vocaloid, a popular persona-based voice synthesizer artists use to render songs and create MV’s with, was extremely popular among the community then, so in the next two weeks, I wrote articles after articles, sharing tutorials on a few Japanese video websites and download tools, and posting reviews and rankings of popular Vocaloid videos. When the front page is finally filled with enough content, I moved on to the next stage.
+SquareSpace, instead of WordPress, was our perfect choice at the time. We wanted to focus on design and content, and our blog had a pretty standard site structure. SquareSpace offered all of that and required no installation and maintenance. Today people would probably call this the "lean start" strategy: avoid operational overhead as much as possible when you're just testing the idea. 
 
-### User Feedback
-Reddit was my choice of user testing ground. I visited the related subreddits often and believed that I could get some useful feedback from these users, so I started posting links and noting down the constructive comments people wrote. In particular, there were a lot of remarks on how the visuals could be improved and quite a few requests to join as writers/editors. I couldn’t be more glad to take these suggestions in. Another month in, I bought a dedicated domain and redesigned the theme to reflect what was popular on the site at the time.
+Because the site was to be the home for high-quality articles on top-trending topics, I wanted visitors to "hear" the pulse of excitement and "feel" our dedication to quality. I started putting together elements that made me feel that way: vibrant and diffused shelf lights, modernist sky scrapers, texture of premium documents, glossy electronics, etc.. Inspired by all these textures and elements, What I arrived at is a template that sports a youthful look with a bold color palette and trendy element design, on top of a highly refined texture background with hints of soft lighting at appropriate places.
 
-<img src="/assets/images/projects/fm1397/version 2.png" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/anime-spotlight/article-shot.jpg" class='responsive-img materialboxed' />
 
-### Popular Content & Avoiding Pigeonholing 
-At this point, Google Analytics was reporting about 80-100 readers consistently every day, and most of them came here for one thing: ranking videos of Vocaloid songs. However, the mission of FM 139.7 was to create a well rounded source of popular culture news, so behind the small success of the reader count, I was worried that it’ll pigeonhole the site into “the Vocaloid song ranking blog.”
+This was probably the very first serious web design project I did. Not much handwritten CSS was necessary at the time since most of my Photoshop mockups translate easily into SquareSpace's "GUI of CSS" interface.
 
-### Recruiting and Program System
-It’s not a one-man job, but I want to make sure that my future collaborators are just as excited as I am. I knew that to motivate people, you need to offer a sense of control and tangible accomplishment (which are a part of the motivation trifecta: autonomy, mastery and purpose, as I learned much later on). 
-My solution is to attract enthusiastic authors to cover a wide range of topics by offering a satellite branding program. In a nutshell, a qualified author receives his own page and category with custom graphics and channel name, akin to how a TV channel hosts several programs featuring different hosts. In addition, I thought this would be convenient for writers who don’t want to learn the technical details of hosting their own blog as well. 
-I designed a few campaign banners and distributed them to popular forums and subreddits. Immediately, this collaborative yet individualized system attracted a large amount of interests. I remember receiving about 30-40 emails/PM’s asking for details, and I couldn’t be happier about it.
-
-### Rebranding and Content Expansion
-I eventually settled on two authors, Pete, who was responsible for Anime Spotlight until the very end, and Michelle, who led the VocaloRank channel with me. 
-Naturally, the site has to change from its original branding. Two months later, before New Year’s Eve of 2014, I launched a rebranded version of FM 139.7, after another month of design work.
-
-<img src="/assets/images/projects/fm1397/version 3.png" class='responsive-img materialboxed' />
-
-The message is clear and loud: East-Asian Pop Culture Center. No ambiguity, no pigeonholing.  Along with the rebranding, two more authors came onboard. FM 139.7, at this point, was producing reviews and news on Japanese animation, Vocaloid, J-Pop, K-Pop, Korean drama and Hong Kong action movies. Finally, East-Asian Pop Culture Center is living up to its slogan.
-
-### Plateau and Pivot
-As much as individual reviews were highly popular and well received among the community, the site has an overarching and fundamental problem plaguing its growth: plateauing number of subscribers. At the peak, FM 139.7 was getting an average of hundreds of reader visits per day, which seemed fantastic. Indeed, it was, until subscriber count stagnated at low 500’s and our organic marketing reached its capacity. 
-
-<img src="/assets/images/projects/fm1397/ga.png" class='responsive-img materialboxed' />
-
-What is this “capacity”? You may ask. I believe that this capacity is the pool of people who are more or less like me - consuming a wide range of East-Asian pop culture media. This population is willing to subscribe and read everything we post, but the rest wasn’t. There were sub-communities, fans of only K-Pop, or only anime. These were the potential users that we couldn’t convert, because understandably, they want to read articles from us, but not _every_ article.
-
-As daily reader count stabilizes and subscribe count plateaus, I decided that we need to make a drastic change. The team, at this point, was consisted of seven people. I couldn’t quite remember all of their pen names, but each channel had at least one or two authors behind its content, and everyone was working hard and having fun pushing out reviews. I gathered everyone and expressed my concerns and opinions over a Skype meeting, some were disappointed by the direction and some were onboard, which was to be expected. 
-
-A few months later, we launched two new publications, as a way to break down the concentration of FM 139.7 into more specialized ones. One of which is AnimeSpotlight, and the other being VocaloLight. 
-
-### Reflections
-
-It was a fantastic learning experience in less than a year. I managed to grow the team from 1 to 7 and created a small but significant community of followers. Although in order to concentrate on my next two publications, I had to stop updating the site, I hope the people who sincerely liked us would still support other publications as well. The biggest takeaway from this for me is that it's probably never a good idea to jam too many flavors into one recipe, because you're creating a dish for too specific of a type of people, or even no one.
+<img src="/assets/images/projects/anime-spotlight/homepage-shot.png" class='responsive-img materialboxed' />
