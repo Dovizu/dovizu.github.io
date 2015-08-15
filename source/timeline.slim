@@ -33,6 +33,23 @@ section#timeline.timeline-container
   /    .timeline-content
   /      = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
   /
+  .timeline-mark
+    span.mark 2014
+    .remark
+      span something witty
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to 'http://migroup.donny.io', target: '_blank' do
+      .timeline-content
+        = image_tag 'projects/migroup/feature-shot.png', class: 'responsive-img'
+
+  .timeline-mark
+    span.mark 2013
+    .remark
+      span something witty
+
   .timeline-block.event-block
     .timeline-badge.valign-wrapper.center-align
       span.valign: i.ss-calendar
