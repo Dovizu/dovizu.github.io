@@ -6,33 +6,23 @@ section#timeline.timeline-container
 
   .timeline-mark
     span.mark Now
-  /
-  /.timeline-block.project-block
-  /  .timeline-badge.circle.valign-wrapper.center-align
-  /    span.valign: i.ss-star
-  /  = link_to 'projects/squairo' do
-  /    .timeline-content
-  /      = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
-  /
-  /.timeline-block.project-block
-  /  .timeline-badge.circle.valign-wrapper.center-align
-  /    span.valign: i.ss-star
-  /  a href='#'
-  /    .timeline-content
-  /      = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
-  /
-  /.timeline-mark
-  /  span.mark 2014
-  /  .remark
-  /    span The year of butterflies and bananas
-  /
-  /.timeline-block.project-block
-  /  .timeline-badge.circle.valign-wrapper.center-align
-  /    span.valign: i.ss-star
-  /  a href='#'
-  /    .timeline-content
-  /      = image_tag 'projects/example/feature_shot.png', class: 'responsive-img'
-  /
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to '/projects/ramlr' do
+      .timeline-content
+        = image_tag 'projects/ramlr/feature-shot.png', class: 'responsive-img'
+
+  .timeline-block.event-block
+    .timeline-badge.valign-wrapper.center-align
+      span.valign: i.ss-calendar
+    .timeline-content
+      span
+        | Started working at
+        a<> href="http://www.crunchyroll.com/about" target="_blank" Crunchyroll, Inc.
+        | as an Engineering Intern
+
   .timeline-mark
     span.mark 2014
     .remark
