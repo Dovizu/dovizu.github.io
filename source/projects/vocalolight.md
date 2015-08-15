@@ -25,15 +25,15 @@ To make sure VocaloLight covers a fair range of materials and authors are be abl
 
 The design of VocaloLight core elements and layouts was inspired by graphics used on Hatsune Miku, the most popular Vocaloid character.
 
-<img src="/assets/images/projects/vocalolight/color palette.png" class='responsive-img materialboxed' />
-<img src="/assets/images/projects/vocalolight/element collection.png" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/color-palette.png" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/element-collection.png" class='responsive-img materialboxed' />
 
 ### Sample Pages
 
-<img src="/assets/images/projects/vocalolight/sample 1.jpg" class='responsive-img materialboxed' />
-<img src="/assets/images/projects/vocalolight/sample 2.jpg" class='responsive-img materialboxed' />
-<img src="/assets/images/projects/vocalolight/sample 3.jpg" class='responsive-img materialboxed' />
-<img src="/assets/images/projects/vocalolight/sample 4.jpg" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/sample-1.jpg" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/sample-2.jpg" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/sample-3.jpg" class='responsive-img materialboxed' />
+<img src="/assets/images/projects/vocalolight/sample-4.jpg" class='responsive-img materialboxed' />
 
 ### Reception
 
