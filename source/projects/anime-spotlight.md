@@ -21,6 +21,7 @@ SquareSpace, instead of WordPress, was our perfect choice at the time. We wanted
 
 Because the site was to be the home for high-quality articles on top-trending topics, I wanted visitors to "hear" the pulse of excitement and "feel" our dedication to quality. I started putting together elements that made me feel that way: vibrant and diffused shelf lights, modernist sky scrapers, texture of premium documents, glossy electronics, etc.. Inspired by all these textures and elements, What I arrived at is a template that sports a youthful look with a bold color palette and trendy element design, on top of a highly refined texture background with hints of soft lighting at appropriate places.
 
+<img src="/assets/images/projects/anime-spotlight/sketch.jpg" class='responsive-img materialboxed' />
 <img src="/assets/images/projects/anime-spotlight/article-shot.jpg" class='responsive-img materialboxed' />
 
 This was probably the very first serious web design project I did. Not much handwritten CSS was necessary at the time since most of my Photoshop mockups translate easily into SquareSpace's "GUI of CSS" interface.
