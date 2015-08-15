@@ -4,8 +4,39 @@ module_title: Timeline
 
 section#timeline.timeline-container
 
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to '/projects/squairo' do
+      .timeline-content
+        = image_tag 'projects/squairo/feature-shot.png', class: 'responsive-img'
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to '/projects/roomforward' do
+      .timeline-content
+        = image_tag 'projects/roomforward/feature-shot.png', class: 'responsive-img'
+
+  .timeline-block.event-block
+    .timeline-badge.valign-wrapper.center-align
+      span.valign: i.ss-calendar
+    .timeline-content
+      span
+        | Co-founded
+        a<> href="https://angel.co/roomforward" target="_blank" RoomForward, Inc.
+
   .timeline-mark
-    span.mark Now
+    span.mark 2015
+    .remark
+      span something witty
+
+  .timeline-block.project-block
+    .timeline-badge.circle.valign-wrapper.center-align
+      span.valign: i.ss-star
+    = link_to '/projects/gloinno' do
+      .timeline-content
+        = image_tag 'projects/gloinno/feature-shot.png', class: 'responsive-img'
 
   .timeline-block.project-block
     .timeline-badge.circle.valign-wrapper.center-align
