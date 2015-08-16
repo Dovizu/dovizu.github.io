@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>RAMLR</title><link href="/assets/stylesheets/all-e950816a.css" rel="stylesheet" type="text/css" /><script src="/assets/javascripts/all-960911c0.js" type="text/javascript"></script></head><body class="container projects projects_ramlr projects_ramlr_index"><header><ul class="breadcrumbs"><li><a href="/">Donny</a></li><li><a href="/projects/">Projects</a></li></ul></header><main><article class="project-container"><div class="project-banner" style=" background-image: url(/assets/images/projects/ramlr/banner-26dbca84.png);"></div><div class="project-content"><div class="project-lead valign-wrapper" style=" color: #fff; text-shadow: -1px -1px 0 #, 1px -1px 0 #, -1px 1px 0 #, 1px 1px 0 #;"><div class="valign"><h1 class="project-name">RAMLR</h1><h1 class="post-title">RAMLR Visualization and Syntax Highlighter</h1></div></div><p>RAMLR is an internal software I developed with two other teammates during my internship at Crunchyroll, Inc..</p>
+
+<h3 id="objectives">Objectives</h3>
+
+<p>The engineering team responsible for Crunchyroll's new payment system just finished speccing out most of their API, and everyone was busy finishing their first sprint. With minor changes and modifications being made on the API on a daily basis, it was a huge hassle for the team for sync the RAML file back and forth and make sure that everyone's on the same page. Thus, the idea for a RAMLR console that pulls from a centralized location was born. I talked to my mentor and asked to be assigned to this project.</p>
+
+<p>The goal of RAMLR was to take MuleSoft's RAML Console application, combine it with a syntax highlighter, and port the application to a Symfony2 web app that has to be run locally.</p>
+
+<h3 id="research">Research</h3>
+
+<p>The research was rather straightforward for a team of 14 working in an office with transparent infrastructure. Everyone had the proper hooks on their computer to download and install Symfony2 web applications, and the entire network was hooked up so that web apps from any dev's computer could serve documents to any other machine in the network. In addition, everyone on the team has at least two monitors as thier workstation setup, so wide-screen assistant app sounds like a reasonable design.</p>
+
+<h3 id="design-and-development">Design and Development</h3>
+
+<p>The first step was to pick the right combination of front-end tools and backend structure to make sure that MuleSoft's RAML Console can be properly transplanted. I did a few experiments and found out that with a little bit custom workaround, the best way is to run RAML Console (an Angular.js app) inside another Angular.js app, which hosts modules necessary for syntax highlighting as well.</p>
+
+<p>After that, we discussed how we could best store bookmarks to RAML document locations in the network. We thought it'd be the best if our API is consistent with theirs, so engineers feel at home when writing endpoints that serve their own RAML documents. We talked to the guys in the team and made sure our API format lines up with theirs.</p>
+
+<p>With that, one teammate created a Symfony bundle that serves up RAML documents. I worked on the Angular application to ensure a seamless user experience and the other teammate coded out the backend for storing bookmarks and keeping track of history.</p>
+
+<p><img src="/assets/images/projects/ramlr/shot1-8a0586ac.png" class="responsive-img materialboxed" />
+<img src="/assets/images/projects/ramlr/shot2-9d0dbf0e.png" class="responsive-img materialboxed" />
+<img src="/assets/images/projects/ramlr/shot3-f08656aa.png" class="responsive-img materialboxed" /></p>
+
+<h3 id="reception">Reception</h3>
+
+<p>Immediately after the first working prototype came out, we deployed it and studied the feedback from the team. The rest was iteration after iteration, until my internship ended. The developers really enjoyed the added speed and convenience. More importantly, no one would code based on outdated APIs only to realize later anymore. I was glad that the team liked what we did.</p>
+</div></article></main><footer><p class="flow-text center-align"><a href="https://twitter.com/dovizu" target="_blank"><i class="fa fa-twitter"></i></a>  <a href="https://www.linkedin.com/in/donnycreynolds" target="_blank"><i class="fa fa-linkedin"></i></a>  <a href="https://github.com/dovizu" target="_blank"><i class="fa fa-github-alt"></i></a>  <a href="#"><i class="fa fa-pencil"></i></a></p></footer></body></html>
