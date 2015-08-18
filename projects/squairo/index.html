@@ -1,181 +1,73 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>Squairo - Solving a storage problem</title><link href="/assets/stylesheets/all-e950816a.css" rel="stylesheet" type="text/css" /><script src="/assets/javascripts/all-960911c0.js" type="text/javascript"></script></head><body class="container projects projects_squairo projects_squairo_index"><header><ul class="breadcrumbs"><li><a href="/">Donny</a></li><li><a href="/projects/">Projects</a></li></ul></header><main><article class="project-container"><div class="project-banner" style=" background-image: url(/assets/images/projects/example/feature_shot-3da3e7c1.png);"></div><div class="project-content"><div class="project-lead valign-wrapper" style=" color: #FFFFFF; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"><div class="valign"><h1 class="project-name">Squairo</h1><h1 class="post-title">Solving a storage problem</h1></div></div><h2 id="an-h2-header">An h2 header</h2>
+<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>Squairo - Solving a storage problem</title><link href="/assets/stylesheets/all-e950816a.css" rel="stylesheet" type="text/css" /><script src="/assets/javascripts/all-960911c0.js" type="text/javascript"></script></head><body class="container projects projects_squairo projects_squairo_index"><header><ul class="breadcrumbs"><li><a href="/">Donny</a></li><li><a href="/projects/">Projects</a></li></ul></header><main><article class="project-container"><div class="project-banner" style=" background-image: url(/assets/images/projects/example/feature_shot-3da3e7c1.png);"></div><div class="project-content"><div class="project-lead valign-wrapper" style=" color: #FFFFFF; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"><div class="valign"><h1 class="project-name">Squairo</h1><h1 class="post-title">Solving a storage problem</h1></div></div><h3 id="problem">Problem</h3>
 
-<p>Paragraphs are separated by a blank line.</p>
+<p>College students switch apartments and travel often. We have internships and research projects over the summer and finding sublets becomes a seasonal activity. What's really annoying amid all these logistical troubles is seeking storage. Of course you can seek out traditional storage, where you have to deal with inflexible dates and expensive rates. Or, you can find a group of friends to share storage together. However, that is another logistical hassle in itself.</p>
 
-<p>2nd paragraph. <em>Italic</em>, <strong>bold</strong>, and <code>monospace</code>. Itemized lists
-look like:</p>
+<h3 id="proposed-solution">Proposed Solution</h3>
 
-<ul>
-  <li>this one</li>
-  <li>that one</li>
-  <li>the other one</li>
-</ul>
+<p>Introducing Squairo: we find reliable people with available apartment/house spaces in your vicinity and help you check in your items into those spaces. Think "Airbnb of storage space."</p>
 
-<p>Note that — not considering the asterisk — the actual text
-content starts at 4-columns in.</p>
+<h3 id="research">Research</h3>
 
-<blockquote>
-  <p>Block quotes are
-written like so.</p>
+<p>Squairo is all about connecting people with free spaces to those who need them. We want the process to be as hands-free as possible, reducing much of the usual overhead of seeking storage. Initially, we thought of an artificially intelligent system for matching space resources with demands most efficiently. We experimented with the idea for a while and realized that it's an overkill for most people, whose criteria for storage space tend to be the same: safe, indoor, and cheap, and most providers of spaces also tend to satisfy these conditions. In other words, I don't really care if my stuff is stored in Jon's apartment or Elise's apartment, as long as both parties seem decent and are equally far from me. The only differentiating factor here is distance and trust.</p>
 
-  <p>They can span multiple paragraphs,
-if you like.</p>
-</blockquote>
-
-<p>Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
-in chapters 12–14"). Three dots … will be converted to an ellipsis.
-Unicode is supported. ☺</p>
-
-<h2 id="an-h2-header-1">An h2 header</h2>
-
-<p>Here's a numbered list:</p>
+<p>For those reasons, we decided that for a MVP, we want to keep it simple and let users choose. The question now is: should storage seekers pick space listings or should space providers make offers to seekers? This is like a stable marriage problem, whoever proposes first has a distinct advantage over the asked. We observed a few things about the storage market and concluded the following:</p>
 
 <ol>
-  <li>first item</li>
-  <li>second item</li>
-  <li>third item</li>
+  <li>People tend to overprice their free space.</li>
+  <li>Space providers are incentivized to stack items to maximize profit.</li>
 </ol>
 
-<p>Note again how the actual text starts at 4 columns in (4 characters
-from the left side). Here's a code sample:</p>
+<p>How do we encourage providers to strike a balance between profit and fair price? How do we discourage providers from stacking multiple people's belongings and potentially cause damage? Our answer to this question is the unique advantage of Squairo.</p>
 
-<pre><code># Let me re-iterate ...
-for i in 1 .. 10 { do-something(i) }
-</code></pre>
+<h3 id="design">Design</h3>
 
-<p>As you probably guessed, indented 4 spaces. By the way, instead of
-indenting the block, you can use delimited blocks, if you like:</p>
+<p>Squairo has an innovative approach to storage seeking. Our workflow is consisted of 5 parts.</p>
 
-<pre><code>define foobar() {
-    print "Welcome to flavor country!";
-}
-</code></pre>
+<h4 id="seekers-post-requests">1. Seekers post requests</h4>
+<p>Storage seekers post their desired durations and dimensions, alongside a few other options, and we give them an estimated cost for the entire duration. That's it. Squairo's goal is to simplify storage hunting process. It can't be simpler than just telling us what you want. However, what happens behind the scenes is just as interesting.</p>
 
-<p>(which makes copying &amp; pasting easier). You can optionally mark the
-delimited block for Pandoc to syntax highlight it:</p>
+<p><em>Initial Mockup</em>
+<img src="/assets/images/projects/squairo/mockup/new-stash-003d435e.png" class="responsive-img materialboxed" />
+<em>Final Production</em>
+<img src="/assets/images/projects/squairo/homepage-a3e64f16.png" class="responsive-img materialboxed" /></p>
 
-<pre><code class="language-python">import time
-# Quick, count to ten!
-for i in range(10):
-    # (but not *too* quick)
-    time.sleep(0.5)
-    print i
-</code></pre>
+<h4 id="providers-maintain-virtual-rooms">2. Providers maintain Virtual Rooms</h4>
+<p>Each storage provider creates a Virtual Room that represents their free space. In this Virtual Room, the provider can arrange items, take in and reject new offers. The virtual room serves as the main interface where a provider picks storage requests whose duration, distance and size best match his/her availability.</p>
 
-<h3 id="an-h3-header">An h3 header</h3>
+<p><em>Initial Mockup</em>
+<img src="/assets/images/projects/squairo/mockup/virtual-room-e938c547.png" class="responsive-img materialboxed" />
+<em>Final Production</em>
+<img src="/assets/images/projects/squairo/virtual-room-040b0997.png" class="responsive-img materialboxed" /></p>
 
-<p>Now a nested list:</p>
+<h4 id="providers-make-offers-to-seekers">3. Providers make offers to seekers</h4>
+<p>Once a provider chooses to place the request into his/her Virtual Room, an offer is made to the storage seeker. If the seeker accepts the offer, both parties will enter the code exchange phase.</p>
 
-<ol>
-  <li>
-    <p>First, get these ingredients:</p>
+<p><em>Initial Mockup</em>
+<img src="/assets/images/projects/squairo/mockup/my-stashes-60078990.png" class="responsive-img materialboxed" />
+<em>Final Production</em>
+<img src="/assets/images/projects/squairo/my-stashes-c7101b41.png" class="responsive-img materialboxed" /></p>
 
-    <ul>
-      <li>carrots</li>
-      <li>celery</li>
-      <li>lentils</li>
-    </ul>
-  </li>
-  <li>
-    <p>Boil some water.</p>
-  </li>
-  <li>
-    <p>Dump everything in the pot and follow
-this algorithm:</p>
+<h4 id="region-sensitive-pricing">4. Region-Sensitive Pricing</h4>
+<p>The pricing is determined through our Region-Sensitive Pricing algorithm. We examine each region's demographic profile and determines a balanced formula to calculate prices incentivizing enough for providers to provide the service and affordable enough for seekers to choose us.</p>
 
-    <pre><code>find wooden spoon
-uncover pot
-stir
-cover pot
-balance wooden spoon precariously on pot handle
-wait 10 minutes
-goto first step (or shut off burner when done)
-</code></pre>
+<p><em>Final Production</em>
+<img src="/assets/images/projects/squairo/price-calc-592c8811.png" class="responsive-img materialboxed" /></p>
 
-    <p>Do not bump wooden spoon or it will fall.</p>
-  </li>
-</ol>
+<h4 id="code-exchange">5. Code Exchange</h4>
+<p>To make sure that both parties have a form of insurance, we designed the Code Exchange phase. When a seeker accepts an offer from a provider, s/he will receive a "Stashing Code" which is to be given to the provider when s/he made sure everything is checked in according to our policy. Only then, the provider will receive half of his/her payment. When it's time to check out, a "Retrieval Code" is used according to a check-out process so the provider receives the other half of the total payment.</p>
 
-<p>Notice again how text always lines up on 4-space indents (including
-that last line which continues item 3 above).</p>
+<p><em>Initial Mockup</em>
+<img src="/assets/images/projects/squairo/mockup/codes-68b6df64.png" class="responsive-img materialboxed" />
+<em>Final Production</em>
+<img src="/assets/images/projects/squairo/oak-overview-8afd7338.png" class="responsive-img materialboxed" /></p>
 
-<p>Here's a link to <a href="http://foo.bar">a website</a>, to a <a href="local-doc.html">local
-doc</a>, and to a <a href="#an-h2-header">section heading in the current
-doc</a>. Here's a footnote <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<h3 id="strategy">Strategy</h3>
+<p>The nature of Squairo dictates how we strategize the product. For one, it'll be impossible for us to visit each campus and localize the pricing formula, one by one. The product is also seasonal, which means little usage for most months of the year. If we were to only target a few campuses, we'd have to wait for a whole semester just to iterate and get feedback, let alone the lack of revenue to even keep the site running.</p>
 
-<p>Tables can look like this:</p>
+<p>We think a franchise approach to this product will be the best. We developed the Squairo Seed Program.
+<img src="/assets/images/projects/squairo/franchise-inofgraphic-90b9f70f.png" class="responsive-img materialboxed" /></p>
 
-<p>size  material      color
-—-  ————  ————
-9     leather       brown
-10    hemp canvas   natural
-11    glass         transparent</p>
+<p>Essentially, we provide aspiring business owners their own instance of Squairo for which they could customize and develop custom branding. This strategy offloads the burden of individual and manual localization for us and pushes Squairo system and technologies to a wider audience.</p>
 
-<p>Table: Shoes, their sizes, and what they're made of</p>
-
-<p>(The above is the caption for the table.) Pandoc also supports
-multi-line tables:</p>
-
-<hr />
-<p>keyword   text
-——–  ———————–
-red       Sunsets, apples, and
-          other red or reddish
-          things.</p>
-
-<p>green     Leaves, grass, frogs
-          and other things it's
-          not easy being.
-——–  ———————–</p>
-
-<p>A horizontal rule follows.</p>
-
-<hr />
-
-<p>Here's a definition list:</p>
-
-<dl>
-  <dt>apples</dt>
-  <dd>Good for making applesauce.
-oranges</dd>
-  <dd>Citrus!
-tomatoes</dd>
-  <dd>There's no "e" in tomatoe.</dd>
-</dl>
-
-<p>Again, text is indented 4 spaces. (Put a blank line between each
-term/definition pair to spread things out more.)</p>
-
-<p>Here's a "line block":</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>Line one</td>
-    </tr>
-    <tr>
-      <td>Line too</td>
-    </tr>
-    <tr>
-      <td>Line tree</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>and images can be specified like so:</p>
-
-<p>Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:</p>
-
-<script type="math/tex; mode=display">I = \int \rho R^{2} dV</script>
-
-<p>And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: `foo`, *bar*, etc.</p>
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>Footnote text goes here. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+<p>Currently, Squairo is in the process of deployment at three UC campuses.</p>
 </div></article></main><footer><p class="flow-text center-align"><a href="https://twitter.com/dovizu" target="_blank"><i class="fa fa-twitter"></i></a>  <a href="https://www.linkedin.com/in/donnyreynolds" target="_blank"><i class="fa fa-linkedin"></i></a>  <a href="https://github.com/dovizu" target="_blank"><i class="fa fa-github-alt"></i></a>  <a href="#"><i class="fa fa-pencil"></i></a></p></footer></body></html>
