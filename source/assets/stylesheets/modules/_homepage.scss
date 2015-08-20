@@ -7,7 +7,6 @@
     line-height: 20px;
     @media #{$medium-and-up} {
       margin-top: 60px;
-
     }
 
     #center-image {
@@ -20,8 +19,8 @@
     }
 
     #name {
-      font-family: $default-body-font;
-      font-weight: $default-body-font-bolder;
+      font-family: $default-headline-font;
+      font-weight: $default-headline-font-normal;
     }
 
     p a {
