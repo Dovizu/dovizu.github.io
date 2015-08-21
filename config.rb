@@ -71,6 +71,10 @@ set :images_dir, 'assets/images'
 sprockets.append_path File.join root, 'assets/fonts'
 activate :directory_indexes
 
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-25640272-3'
+end
+
 ###
 # Bower
 ###
